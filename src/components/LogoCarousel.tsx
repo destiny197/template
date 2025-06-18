@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 const LogoCarousel = () => {
   const logos = [
@@ -9,47 +8,26 @@ const LogoCarousel = () => {
     "/lovable-uploads/7cc724d4-3e14-4e7c-9e7a-8d613fde54d0.png",
   ];
 
-  const extendedLogos = [...logos, ...logos, ...logos];
-
   return (
     <div className="w-full overflow-hidden bg-background/50 backdrop-blur-sm py-12 mt-20">
-      <motion.div 
-        className="flex space-x-16"
-        initial={{ opacity: 0, x: "0%" }}
-        animate={{
-          opacity: 1,
-          x: "-50%"
-        }}
-        transition={{
-          opacity: { duration: 0.5 },
-          x: {
-            duration: 15, // Reduced from 25 to 15 seconds
-            repeat: Infinity,
-            ease: "linear",
-            delay: 0.5
-          }
-        }}
+      <div 
+        className="flex space-x-16 justify-center items-center"
         style={{
           width: "fit-content",
           display: "flex",
-          gap: "4rem"
+          gap: "4rem",
+          margin: "0 auto"
         }}
       >
-        {extendedLogos.map((logo, index) => (
-          <motion.img
+        {logos.map((logo, index) => (
+          <img
             key={`logo-${index}`}
             src={logo}
             alt={`Partner logo ${index + 1}`}
-            className="h-8 object-contain"
-            initial={{ opacity: 0.5 }}
-            whileHover={{ 
-              opacity: 1,
-              scale: 1.05,
-              transition: { duration: 0.2 }
-            }}
+            className="h-8 object-contain opacity-70 hover:opacity-100 transition-opacity duration-200"
           />
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
