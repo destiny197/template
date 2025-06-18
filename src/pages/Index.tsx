@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { FeaturesSection } from "@/components/features/FeaturesSection";
 import { PricingSection } from "@/components/pricing/PricingSection";
-import LogoCarousel from "@/components/LogoCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
@@ -95,9 +94,6 @@ const Index = () => {
 
       {/* Dashboard Preview Section */}
       <DashboardPreview />
-
-      {/* Logo Carousel */}
-      <LogoCarousel />
 
       {/* Payment Methods Carousel */}
       <PaymentCarousel />
