@@ -1,5 +1,6 @@
+
 import { useState, useEffect } from "react";
-import { Command, Menu } from "lucide-react";
+import { Store, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
@@ -20,7 +21,7 @@ const Navigation = () => {
     if (sectionId === 'testimonials') {
       const testimonialSection = document.querySelector('.animate-marquee');
       if (testimonialSection) {
-        const yOffset = -100; // Offset to account for the fixed header
+        const yOffset = -100;
         const y = testimonialSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
@@ -41,7 +42,8 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Features", href: "#features", onClick: () => scrollToSection('features') },
-    { name: "Prices", href: "#pricing", onClick: () => scrollToSection('pricing') },
+    { name: "Pricing", href: "#pricing", onClick: () => scrollToSection('pricing') },
+    { name: "Store Designs", href: "#designs", onClick: () => scrollToSection('designs') },
     { name: "Testimonials", href: "#testimonials", onClick: () => scrollToSection('testimonials') },
   ];
 
@@ -56,8 +58,8 @@ const Navigation = () => {
       <div className="mx-auto h-full px-6">
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-2">
-            <Command className="w-5 h-5 text-primary" />
-            <span className="font-bold text-base">CryptoTrade</span>
+            <Store className="w-5 h-5 text-primary" />
+            <span className="font-bold text-base">BizzBuyNow</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -72,7 +74,7 @@ const Navigation = () => {
                     item.onClick();
                   }
                 }}
-                className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300"
+                className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105"
               >
                 {item.name}
               </a>
@@ -80,9 +82,9 @@ const Navigation = () => {
             <Button 
               onClick={() => scrollToSection('cta')}
               size="sm"
-              className="button-gradient"
+              className="button-gradient hover:scale-105 transition-transform duration-300"
             >
-              Start Trading
+              Start Selling
             </Button>
           </div>
 
@@ -90,7 +92,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="glass">
+                <Button variant="outline" size="icon" className="glass hover:scale-105 transition-transform duration-300">
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
@@ -100,7 +102,7 @@ const Navigation = () => {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-lg text-muted-foreground hover:text-foreground transition-colors hover:scale-105 transition-transform duration-300"
                       onClick={(e) => {
                         e.preventDefault();
                         setIsMobileMenuOpen(false);
@@ -117,9 +119,9 @@ const Navigation = () => {
                       setIsMobileMenuOpen(false);
                       scrollToSection('cta');
                     }}
-                    className="button-gradient mt-4"
+                    className="button-gradient mt-4 hover:scale-105 transition-transform duration-300"
                   >
-                    Start Trading
+                    Start Selling
                   </Button>
                 </div>
               </SheetContent>

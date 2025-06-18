@@ -1,5 +1,6 @@
+
 import { motion } from "framer-motion";
-import { ArrowRight, Command } from "lucide-react";
+import { ArrowRight, Command, Store } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { FeaturesSection } from "@/components/features/FeaturesSection";
@@ -8,6 +9,8 @@ import LogoCarousel from "@/components/LogoCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import PaymentCarousel from "@/components/PaymentCarousel";
+import DashboardPreview from "@/components/DashboardPreview";
 
 const Index = () => {
   return (
@@ -33,19 +36,19 @@ const Index = () => {
           className="inline-block mb-4 px-4 py-1.5 rounded-full glass"
         >
           <span className="text-sm font-medium">
-            <Command className="w-4 h-4 inline-block mr-2" />
-            Next-gen crypto trading platform
+            <Store className="w-4 h-4 inline-block mr-2" />
+            The ultimate ecommerce platform for vendors & dropshippers
           </span>
         </motion.div>
         
         <div className="max-w-4xl relative z-10">
           <h1 className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left">
             <span className="text-gray-200">
-              <TextGenerateEffect words="Trade crypto with" />
+              <TextGenerateEffect words="Build your ecommerce" />
             </span>
             <br />
             <span className="text-white font-medium">
-              <TextGenerateEffect words="confidence & security" />
+              <TextGenerateEffect words="empire with BizzBuyNow" />
             </span>
           </h1>
           
@@ -55,8 +58,8 @@ const Index = () => {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl text-left"
           >
-            Experience seamless cryptocurrency trading with advanced features, real-time analytics, and institutional-grade security.{" "}
-            <span className="text-white">Start trading in minutes.</span>
+            The flexible platform that empowers vendors and dropshippers to list products, manage inventory, and maximize sales with ease.{" "}
+            <span className="text-white">Start selling in minutes.</span>
           </motion.p>
           
           <motion.div
@@ -66,10 +69,10 @@ const Index = () => {
             className="flex flex-col sm:flex-row gap-4 items-start"
           >
             <Button size="lg" className="button-gradient">
-              Start Trading Now
+              Start Selling Now
             </Button>
-            <Button size="lg" variant="link" className="text-white">
-              View Markets <ArrowRight className="ml-2 w-4 h-4" />
+            <Button size="lg" variant="link" className="text-white group transition-all duration-300 hover:text-primary">
+              View Store Designs <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
         </div>
@@ -83,15 +86,21 @@ const Index = () => {
           <div className="glass rounded-xl overflow-hidden">
             <img
               src="/lovable-uploads/c32c6788-5e4a-4fee-afee-604b03113c7f.png"
-              alt="CryptoTrade Dashboard"
+              alt="BizzBuyNow Dashboard"
               className="w-full h-auto"
             />
           </div>
         </motion.div>
       </motion.section>
 
+      {/* Dashboard Preview Section */}
+      <DashboardPreview />
+
       {/* Logo Carousel */}
       <LogoCarousel />
+
+      {/* Payment Methods Carousel */}
+      <PaymentCarousel />
 
       {/* Features Section */}
       <div id="features" className="bg-black">
@@ -125,14 +134,17 @@ const Index = () => {
           className="bg-[#0A0A0A]/80 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-12 text-center relative z-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to start trading?
+            Ready to start your ecommerce journey?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of traders who have already discovered the power of our platform.
+          <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Join thousands of vendors and dropshippers who have already built successful businesses with our platform.
           </p>
-          <Button size="lg" className="button-gradient">
-            Create Account
-            <ArrowRight className="ml-2 w-4 h-4" />
+          <p className="text-sm text-gray-400 mb-8">
+            Supported by our development team for seamless integration
+          </p>
+          <Button size="lg" className="button-gradient group transition-all duration-300 hover:scale-105">
+            Create Your Store
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </motion.div>
       </section>
