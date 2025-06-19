@@ -6,38 +6,33 @@ const PaymentCarousel = () => {
   const paymentMethods = [
     { 
       name: "Flutterwave", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Flutterwave_Logo.png/320px-Flutterwave_Logo.png",
+      logo: "https://flutterwave.com/images/logo/full.svg",
       alt: "Flutterwave"
     },
     { 
       name: "PayPal", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/320px-PayPal.svg.png",
+      logo: "https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png",
       alt: "PayPal"
     },
     { 
       name: "Apple Pay", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Apple_Pay_logo.svg/320px-Apple_Pay_logo.svg.png",
+      logo: "https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg",
       alt: "Apple Pay"
     },
     { 
       name: "Google Pay", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Google_Pay_Logo.svg/320px-Google_Pay_Logo.svg.png",
+      logo: "https://developers.google.com/pay/api/images/brand-guidelines/logo_gpay_color.svg",
       alt: "Google Pay"
     },
     { 
       name: "Visa", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/320px-Visa_Inc._logo.svg.png",
+      logo: "https://usa.visa.com/dam/VCOM/regional/ve/romania/blogs/hero-image/visa-logo-800x450.jpg",
       alt: "Visa"
     },
     { 
       name: "Mastercard", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/320px-Mastercard-logo.svg.png",
+      logo: "https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_circles_92px_2x.png",
       alt: "Mastercard"
-    },
-    { 
-      name: "Stripe", 
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/320px-Stripe_Logo%2C_revised_2016.svg.png",
-      alt: "Stripe"
     },
   ];
 

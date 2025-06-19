@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import PaymentCarousel from "@/components/PaymentCarousel";
 import DashboardPreview from "@/components/DashboardPreview";
+import EarlyUsersSection from "@/components/EarlyUsersSection";
 
 const Index = () => {
   return (
@@ -94,6 +95,9 @@ const Index = () => {
 
       {/* Dashboard Preview Section */}
       <DashboardPreview />
+
+      {/* Early Users Section */}
+      <EarlyUsersSection />
 
       {/* Payment Methods Carousel */}
       <PaymentCarousel />

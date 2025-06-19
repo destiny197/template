@@ -1,8 +1,8 @@
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FeatureTab } from "./FeatureTab";
 import { FeatureContent } from "./FeatureContent";
 import { features } from "@/config/features";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 export const FeaturesSection = () => {
   return (
@@ -12,7 +12,9 @@ export const FeaturesSection = () => {
         <h2 className="text-5xl md:text-6xl font-normal mb-6 tracking-tight text-left">
           Powerful Ecommerce
           <br />
-          <span className="text-gradient font-medium">Features & Tools</span>
+          <span className="text-gradient font-medium">
+            <TextGenerateEffect words="Features & Tools" />
+          </span>
         </h2>
         <p className="text-lg md:text-xl text-gray-400 text-left">
           Everything you need to build and grow your online business with professional ecommerce tools.
