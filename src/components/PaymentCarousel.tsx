@@ -11,27 +11,27 @@ const PaymentCarousel = () => {
     },
     { 
       name: "PayPal", 
-      logo: "https://cdn.worldvectorlogo.com/logos/paypal-2.svg",
+      logo: "/payment-logos/paypal.svg",
       alt: "PayPal"
     },
     { 
       name: "Apple Pay", 
-      logo: "https://cdn.worldvectorlogo.com/logos/apple-pay-payment-mark.svg",
+      logo: "/payment-logos/apple-pay.svg",
       alt: "Apple Pay"
     },
     { 
       name: "Google Pay", 
-      logo: "https://cdn.worldvectorlogo.com/logos/google-pay-2.svg",
+      logo: "/payment-logos/google-pay.svg",
       alt: "Google Pay"
     },
     { 
       name: "Visa", 
-      logo: "https://cdn.worldvectorlogo.com/logos/visa-10.svg",
+      logo: "/payment-logos/visa.svg",
       alt: "Visa"
     },
     { 
       name: "Mastercard", 
-      logo: "https://cdn.worldvectorlogo.com/logos/mastercard-6.svg",
+      logo: "/payment-logos/mastercard.svg",
       alt: "Mastercard"
     },
     { 
