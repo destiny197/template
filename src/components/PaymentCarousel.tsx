@@ -4,13 +4,41 @@ import { CreditCard } from "lucide-react";
 
 const PaymentCarousel = () => {
   const paymentMethods = [
-    { name: "Flutterwave", logo: "💳" },
-    { name: "PayPal", logo: "🅿️" },
-    { name: "Apple Pay", logo: "🍎" },
-    { name: "Google Pay", logo: "🔍" },
-    { name: "Visa", logo: "💳" },
-    { name: "Mastercard", logo: "💳" },
-    { name: "Verve", logo: "💳" },
+    { 
+      name: "Flutterwave", 
+      logo: "https://logos-world.net/wp-content/uploads/2023/02/Flutterwave-Logo.png",
+      alt: "Flutterwave"
+    },
+    { 
+      name: "PayPal", 
+      logo: "https://logos-world.net/wp-content/uploads/2020/07/PayPal-Logo.png",
+      alt: "PayPal"
+    },
+    { 
+      name: "Apple Pay", 
+      logo: "https://logos-world.net/wp-content/uploads/2020/04/Apple-Pay-Logo.png",
+      alt: "Apple Pay"
+    },
+    { 
+      name: "Google Pay", 
+      logo: "https://logos-world.net/wp-content/uploads/2020/09/Google-Pay-Logo.png",
+      alt: "Google Pay"
+    },
+    { 
+      name: "Visa", 
+      logo: "https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png",
+      alt: "Visa"
+    },
+    { 
+      name: "Mastercard", 
+      logo: "https://logos-world.net/wp-content/uploads/2020/04/Mastercard-Logo.png",
+      alt: "Mastercard"
+    },
+    { 
+      name: "Verve", 
+      logo: "https://seeklogo.com/images/V/verve-logo-4F4E531F24-seeklogo.com.png",
+      alt: "Verve"
+    },
   ];
 
   return (
@@ -40,7 +68,7 @@ const PaymentCarousel = () => {
 
         <div className="relative overflow-hidden">
           <motion.div 
-            className="flex gap-8 items-center"
+            className="flex gap-12 items-center"
             animate={{
               x: [0, -1920]
             }}
@@ -56,16 +84,15 @@ const PaymentCarousel = () => {
             {[...paymentMethods, ...paymentMethods, ...paymentMethods].map((payment, index) => (
               <motion.div
                 key={`${payment.name}-${index}`}
-                className="flex-shrink-0 glass glass-hover rounded-xl p-6 min-w-[200px] text-center group cursor-pointer"
-                whileHover={{ scale: 1.05 }}
+                className="flex-shrink-0 group cursor-pointer"
+                whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {payment.logo}
-                </div>
-                <h3 className="font-medium text-lg group-hover:text-primary transition-colors duration-300">
-                  {payment.name}
-                </h3>
+                <img 
+                  src={payment.logo} 
+                  alt={payment.alt}
+                  className="h-12 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter brightness-0 invert"
+                />
               </motion.div>
             ))}
           </motion.div>
