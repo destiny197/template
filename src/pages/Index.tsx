@@ -48,7 +48,7 @@ const Index = () => {
             </span>
             <br />
             <span className="text-white font-medium">
-              <TextGenerateEffect words="empire with BizzBuyNow" />
+              empire with <span className="text-primary"><TextGenerateEffect words="BizzBuyNow" /></span>
             </span>
           </h1>
           

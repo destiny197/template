@@ -6,33 +6,38 @@ const PaymentCarousel = () => {
   const paymentMethods = [
     { 
       name: "Flutterwave", 
-      logo: "https://flutterwave.com/images/logo/full.svg",
+      logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMjAgNDBMMTIwIDIwMCIgc3Ryb2tlPSIjRkY2NjAwIiBzdHJva2Utd2lkdGg9IjgiLz4KPHA+CjxyZWN0IHg9IjQwIiB5PSI4MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI4MCIgcng9IjQwIiBmaWxsPSIjRkY2NjAwIi8+Cjx0ZXh0IHg9IjEyMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCI+RjwvdGV4dD4KPC9zdmc+",
       alt: "Flutterwave"
     },
     { 
       name: "PayPal", 
-      logo: "https://www.paypalobjects.com/webstatic/mktg/Logo/pp-logo-100px.png",
+      logo: "https://cdn.worldvectorlogo.com/logos/paypal-2.svg",
       alt: "PayPal"
     },
     { 
       name: "Apple Pay", 
-      logo: "https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg",
+      logo: "https://cdn.worldvectorlogo.com/logos/apple-pay-payment-mark.svg",
       alt: "Apple Pay"
     },
     { 
       name: "Google Pay", 
-      logo: "https://developers.google.com/pay/api/images/brand-guidelines/logo_gpay_color.svg",
+      logo: "https://cdn.worldvectorlogo.com/logos/google-pay-2.svg",
       alt: "Google Pay"
     },
     { 
       name: "Visa", 
-      logo: "https://usa.visa.com/dam/VCOM/regional/ve/romania/blogs/hero-image/visa-logo-800x450.jpg",
+      logo: "https://cdn.worldvectorlogo.com/logos/visa-10.svg",
       alt: "Visa"
     },
     { 
       name: "Mastercard", 
-      logo: "https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_circles_92px_2x.png",
+      logo: "https://cdn.worldvectorlogo.com/logos/mastercard-6.svg",
       alt: "Mastercard"
+    },
+    { 
+      name: "Verve", 
+      logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDI0MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyNDAiIGhlaWdodD0iMTUwIiByeD0iMTIiIGZpbGw9IiMwMDY2RkYiLz4KPHA+Cjx0ZXh0IHg9IjEyMCIgeT0iODUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIj5WRVJWRSA8L3RleHQ+Cjwvc3ZnPg==",
+      alt: "Verve"
     },
   ];
 
@@ -65,7 +70,7 @@ const PaymentCarousel = () => {
           <motion.div 
             className="flex gap-12 items-center"
             animate={{
-              x: [0, -1920]
+              x: [0, -1680]
             }}
             transition={{
               x: {
@@ -86,7 +91,7 @@ const PaymentCarousel = () => {
                 <img 
                   src={payment.logo} 
                   alt={payment.alt}
-                  className="h-12 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter brightness-0 invert"
+                  className="h-12 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </motion.div>
             ))}
