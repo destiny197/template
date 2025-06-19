@@ -6,38 +6,38 @@ const PaymentCarousel = () => {
   const paymentMethods = [
     { 
       name: "Flutterwave", 
-      logo: "https://logos-world.net/wp-content/uploads/2023/02/Flutterwave-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Flutterwave_Logo.png/320px-Flutterwave_Logo.png",
       alt: "Flutterwave"
     },
     { 
       name: "PayPal", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/07/PayPal-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/320px-PayPal.svg.png",
       alt: "PayPal"
     },
     { 
       name: "Apple Pay", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Apple-Pay-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Apple_Pay_logo.svg/320px-Apple_Pay_logo.svg.png",
       alt: "Apple Pay"
     },
     { 
       name: "Google Pay", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/09/Google-Pay-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Google_Pay_Logo.svg/320px-Google_Pay_Logo.svg.png",
       alt: "Google Pay"
     },
     { 
       name: "Visa", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/320px-Visa_Inc._logo.svg.png",
       alt: "Visa"
     },
     { 
       name: "Mastercard", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Mastercard-Logo.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/320px-Mastercard-logo.svg.png",
       alt: "Mastercard"
     },
     { 
-      name: "Verve", 
-      logo: "https://seeklogo.com/images/V/verve-logo-4F4E531F24-seeklogo.com.png",
-      alt: "Verve"
+      name: "Stripe", 
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/320px-Stripe_Logo%2C_revised_2016.svg.png",
+      alt: "Stripe"
     },
   ];
 
