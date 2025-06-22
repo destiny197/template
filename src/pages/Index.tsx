@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ArrowRight, Command, Store } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,6 +10,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import PaymentCarousel from "@/components/PaymentCarousel";
 import DashboardPreview from "@/components/DashboardPreview";
 import EarlyUsersSection from "@/components/EarlyUsersSection";
+import FloatingCookie from "@/components/FloatingCookie";
 
 const Index = () => {
   return (
@@ -153,6 +153,9 @@ const Index = () => {
       <div className="bg-black">
         <Footer />
       </div>
+
+      {/* Floating Cookie */}
+      <FloatingCookie />
     </div>
   );
 };
