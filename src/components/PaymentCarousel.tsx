@@ -6,7 +6,7 @@ const PaymentCarousel = () => {
   const paymentMethods = [
     { 
       name: "Flutterwave", 
-      logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMjAgNDBMMTIwIDIwMCIgc3Ryb2tlPSIjRkY2NjAwIiBzdHJva2Utd2lkdGg9IjgiLz4KPHA+CjxyZWN0IHg9IjQwIiB5PSI4MCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSI4MCIgcng9IjQwIiBmaWxsPSIjRkY2NjAwIi8+Cjx0ZXh0IHg9IjEyMCIgeT0iMTMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iYm9sZCI+RjwvdGV4dD4KPC9zdmc+",
+      logo: "https://flutterwave.com/images/logo/full.svg",
       alt: "Flutterwave"
     },
     { 
@@ -36,14 +36,34 @@ const PaymentCarousel = () => {
     },
     { 
       name: "Verve", 
-      logo: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDI0MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyNDAiIGhlaWdodD0iMTUwIiByeD0iMTIiIGZpbGw9IiMwMDY2RkYiLz4KPHA+Cjx0ZXh0IHg9IjEyMCIgeT0iODUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIj5WRVJWRSA8L3RleHQ+Cjwvc3ZnPg==",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/Verve_logo.svg",
       alt: "Verve"
     },
   ];
 
   return (
-    <section className="py-16 bg-black">
-      <div className="container px-4">
+    <section className="py-16 bg-black overflow-hidden relative">
+      {/* Scroll Animation Background Text */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <motion.div
+          className="text-[200px] font-bold text-white/5 whitespace-nowrap"
+          animate={{
+            x: [0, -2000]
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 30,
+              ease: "linear",
+            },
+          }}
+        >
+          PAYMENT SOLUTIONS • SECURE TRANSACTIONS • GLOBAL REACH • 
+        </motion.div>
+      </div>
+
+      <div className="container px-4 relative z-10">
         <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -92,6 +112,11 @@ const PaymentCarousel = () => {
                   src={payment.logo} 
                   alt={payment.alt}
                   className="h-12 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                  onError={(e) => {
+                    // Fallback for broken images
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
                 />
               </motion.div>
             ))}
