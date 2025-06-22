@@ -1,45 +1,45 @@
+
 "use client";
 
 import { motion } from "framer-motion";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Card } from "./ui/card";
 
-const testimonials = [
+const storeDesigns = [
   {
-    name: "Michael Chen",
-    role: "Professional Trader",
-    image: "https://avatars.githubusercontent.com/u/1234567?v=4",
-    content: "The real-time market data and advanced trading features have significantly improved my trading performance. The platform's security measures give me peace of mind."
+    name: "Minimalist Fashion Store",
+    category: "Fashion & Apparel",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop",
+    color: "from-blue-500/20 to-purple-600/20"
   },
   {
-    name: "Sarah Johnson",
-    role: "Crypto Fund Manager",
-    image: "https://avatars.githubusercontent.com/u/2345678?v=4",
-    content: "CryptoTrade's institutional-grade tools have transformed our trading strategy. The API integration and automated features have saved us countless hours."
+    name: "Electronics Marketplace",
+    category: "Technology",
+    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop",
+    color: "from-green-500/20 to-teal-600/20"
   },
   {
-    name: "David Wilson",
-    role: "Early Crypto Investor",
-    image: "https://avatars.githubusercontent.com/u/3456789?v=4",
-    content: "The customer support is exceptional, and the platform's intuitive design made getting started with crypto trading seamless. A game-changer for both beginners and pros."
+    name: "Artisan Crafts Store",
+    category: "Handmade & Crafts",
+    image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop",
+    color: "from-orange-500/20 to-red-600/20"
   },
   {
-    name: "Emily Zhang",
-    role: "DeFi Developer",
-    image: "https://avatars.githubusercontent.com/u/4567890?v=4",
-    content: "We've seen remarkable improvements in our trading efficiency since switching to CryptoTrade. The smart order routing and liquidity aggregation are particularly impressive."
+    name: "Beauty & Cosmetics",
+    category: "Health & Beauty",
+    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop",
+    color: "from-pink-500/20 to-rose-600/20"
   },
   {
-    name: "James Rodriguez",
-    role: "Crypto Security Expert",
-    image: "https://avatars.githubusercontent.com/u/5678901?v=4",
-    content: "The security features are robust and the regular updates keep us ahead of emerging threats. It's exactly what the crypto industry needed."
+    name: "Home & Garden",
+    category: "Lifestyle",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
+    color: "from-emerald-500/20 to-cyan-600/20"
   },
   {
-    name: "Lisa Thompson",
-    role: "Portfolio Manager",
-    image: "https://avatars.githubusercontent.com/u/6789012?v=4",
-    content: "The platform's ability to handle complex trading strategies while maintaining simplicity in its interface is remarkable. It's been invaluable for our portfolio management."
+    name: "Sports & Fitness",
+    category: "Sports Equipment",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+    color: "from-indigo-500/20 to-blue-600/20"
   }
 ];
 
@@ -54,49 +54,47 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-normal mb-4">Trusted by Traders</h2>
+          <h2 className="text-5xl font-normal mb-4">Beautiful Store Designs</h2>
           <p className="text-muted-foreground text-lg">
-            Join thousands of satisfied traders on CryptoTrade
+            Choose from professionally designed templates for any business category
           </p>
         </motion.div>
 
         <div className="relative flex flex-col antialiased">
           <div className="relative flex overflow-hidden py-4">
             <div className="animate-marquee flex min-w-full shrink-0 items-stretch gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={`${index}-1`} className="w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <Avatar className="h-12 w-12">
-                      <AvatarImage src={testimonial.image} />
-                      <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h4 className="font-medium text-white/90">{testimonial.name}</h4>
-                      <p className="text-sm text-white/60">{testimonial.role}</p>
-                    </div>
+              {storeDesigns.map((design, index) => (
+                <Card key={`${index}-1`} className="w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 overflow-hidden group cursor-pointer">
+                  <div className="relative h-48 overflow-hidden">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${design.color} opacity-50 group-hover:opacity-70 transition-opacity duration-300`} />
+                    <img
+                      src={design.image}
+                      alt={design.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <p className="text-white/70 leading-relaxed">
-                    {testimonial.content}
-                  </p>
+                  <div className="p-6">
+                    <h4 className="font-medium text-white/90 mb-2">{design.name}</h4>
+                    <p className="text-sm text-white/60">{design.category}</p>
+                  </div>
                 </Card>
               ))}
             </div>
             <div className="animate-marquee flex min-w-full shrink-0 items-stretch gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={`${index}-2`} className="w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 p-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <Avatar className="h-12 w-12">
-                      <AvatarImage src={testimonial.image} />
-                      <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h4 className="font-medium text-white/90">{testimonial.name}</h4>
-                      <p className="text-sm text-white/60">{testimonial.role}</p>
-                    </div>
+              {storeDesigns.map((design, index) => (
+                <Card key={`${index}-2`} className="w-[400px] shrink-0 bg-black/40 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all duration-300 overflow-hidden group cursor-pointer">
+                  <div className="relative h-48 overflow-hidden">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${design.color} opacity-50 group-hover:opacity-70 transition-opacity duration-300`} />
+                    <img
+                      src={design.image}
+                      alt={design.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <p className="text-white/70 leading-relaxed">
-                    {testimonial.content}
-                  </p>
+                  <div className="p-6">
+                    <h4 className="font-medium text-white/90 mb-2">{design.name}</h4>
+                    <p className="text-sm text-white/60">{design.category}</p>
+                  </div>
                 </Card>
               ))}
             </div>
