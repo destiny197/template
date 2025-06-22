@@ -43,13 +43,6 @@ const DashboardPreview = () => {
     }
   ];
 
-  const stats = [
-    { icon: ShoppingBag, value: "50K+", label: "Products Listed" },
-    { icon: Users, value: "15K+", label: "Active Vendors" },
-    { icon: TrendingUp, value: "98%", label: "Success Rate" },
-    { icon: BarChart3, value: "$2M+", label: "Monthly Sales" }
-  ];
-
   return (
     <section id="designs" className="py-24 bg-black">
       <div className="container px-4">
@@ -98,34 +91,6 @@ const DashboardPreview = () => {
             ))}
           </div>
         </div>
-
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="glass rounded-xl p-8"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center group cursor-pointer"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                  <stat.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
