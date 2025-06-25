@@ -11,6 +11,9 @@ BizzBuyNow is an ecommerce platform for vendors and dropshippers to list product
 - **Animations**: Framer Motion
 
 ## Recent Changes
+- 2024-12-19: Fixed cookie component to use green gradient with black icon
+- 2024-12-19: Improved scroll section with better animations and positioning
+- 2024-12-19: Fixed horizontal overflow issue causing page shifting
 - 2024-12-19: Added DesignCube-inspired scroll section with smooth animations
 - 2024-12-19: Updated cookie component to use brand green color (#7AFF57)
 - 2024-12-19: Started migration from Express/Vite to Next.js per user request
