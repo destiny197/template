@@ -29,7 +29,7 @@ const ScrollSection = () => {
   ];
 
   return (
-    <div ref={containerRef} className="relative bg-black">
+    <div ref={containerRef} className="relative bg-black w-full">
       {sections.map((section, index) => (
         <ScrollSectionItem
           key={index}
@@ -65,7 +65,7 @@ const ScrollSectionItem = ({
   return (
     <div 
       ref={ref}
-      className="relative h-screen flex items-center justify-center px-4 md:px-8 lg:px-16"
+      className="relative min-h-screen flex items-center justify-center px-4 md:px-8 lg:px-16 bg-black"
     >
       {/* Large section number background */}
       <motion.div

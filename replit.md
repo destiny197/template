@@ -22,8 +22,10 @@ BizzBuyNow is an ecommerce platform for vendors and dropshippers to list product
 
 ## Current Status
 - ✅ Migration to Next.js completed successfully
+- ✅ DesignCube-inspired scroll section implemented
 - Next.js application running on port 5000
 - All components and API routes migrated
+- Scroll section with smooth animations and green theme active
 
 ## Migration Completed
 - 2024-12-19: Successfully migrated from Express/Vite to Next.js architecture
