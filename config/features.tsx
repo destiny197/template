@@ -1,40 +1,20 @@
-import { ShoppingCart, Users, BarChart3, Zap, Shield, Globe } from "lucide-react";
-
 export const features = [
   {
-    icon: <ShoppingCart className="w-6 h-6" />,
-    title: "E-commerce Platform",
-    description: "Complete online store with payment processing and inventory management.",
-    image: "/feature-ecommerce.jpg"
+    id: "inventory",
+    title: "Inventory Management",
+    description: "Track your products, stock levels, and get low-stock alerts",
+    content: "Advanced inventory tracking with real-time updates, barcode scanning, and automated reorder points."
   },
   {
-    icon: <Users className="w-6 h-6" />,
-    title: "Customer Management",
-    description: "Advanced CRM with customer insights, support tickets, and communication tools.",
-    image: "/feature-crm.jpg"
+    id: "orders",
+    title: "Order Processing",
+    description: "Streamline order fulfillment from cart to delivery",
+    content: "Automated order processing with integrated shipping, tracking, and customer notifications."
   },
   {
-    icon: <BarChart3 className="w-6 h-6" />,
-    title: "Analytics & Reports",
-    description: "Real-time business analytics with detailed sales and performance reports.",
-    image: "/feature-analytics.jpg"
-  },
-  {
-    icon: <Zap className="w-6 h-6" />,
-    title: "Automation",
-    description: "Automate workflows, email marketing, and business processes.",
-    image: "/feature-automation.jpg"
-  },
-  {
-    icon: <Shield className="w-6 h-6" />,
-    title: "Security",
-    description: "Enterprise-grade security with SSL encryption and fraud protection.",
-    image: "/feature-security.jpg"
-  },
-  {
-    icon: <Globe className="w-6 h-6" />,
-    title: "Global Reach",
-    description: "Multi-currency support and international shipping capabilities.",
-    image: "/feature-global.jpg"
+    id: "analytics",
+    title: "Sales Analytics",
+    description: "Deep insights into your sales performance and trends",
+    content: "Comprehensive analytics dashboard with sales forecasting, customer insights, and performance metrics."
   }
 ];
