@@ -13,6 +13,7 @@ import PaymentCarousel from "@/components/PaymentCarousel";
 import DashboardPreview from "@/components/DashboardPreview";
 import EarlyUsersSection from "@/components/EarlyUsersSection";
 import FloatingCookie from "@/components/FloatingCookie";
+import ScrollSection from "@/components/ScrollSection";
 
 export default function HomePage() {
   return (
@@ -100,6 +101,9 @@ export default function HomePage() {
 
       {/* Early Users Section */}
       <EarlyUsersSection />
+
+      {/* Scroll Section */}
+      <ScrollSection />
 
       {/* Payment Carousel */}
       <PaymentCarousel />

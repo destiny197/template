@@ -26,10 +26,10 @@ const FloatingCookie = () => {
         whileHover={{ 
           scale: 1.1, 
           rotate: 15,
-          boxShadow: "0 10px 30px rgba(74, 222, 128, 0.3)"
+          boxShadow: "0 10px 30px rgba(122, 255, 87, 0.4)"
         }}
         whileTap={{ scale: 0.95 }}
-        className="bg-gradient-to-br from-amber-400 to-orange-500 p-4 rounded-full shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300"
+        className="bg-gradient-to-br from-[#7AFF57] to-[#5BCC3A] p-4 rounded-full shadow-lg cursor-pointer hover:shadow-xl transition-shadow duration-300"
       >
         <Cookie className="w-8 h-8 text-white" />
       </motion.div>

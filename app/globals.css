@@ -75,7 +75,11 @@
 }
 
 .button-gradient {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #7AFF57 0%, #5BCC3A 100%);
+}
+
+.text-primary {
+  color: #7AFF57;
 }
 
 .animate-bounce-slow {
